@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Auto SakuBot Chapter
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  try to take over the world!
 // @author       You
 // @match        https://mangadex.org/*
@@ -19,8 +19,8 @@ function change(){
     if(match){
       const [lien,chapterfind,id,pagefind] = match;
       page = pagefind ? pagefind : 1;
+      url = lien;
       if(chapterfind !== chapter){
-          url = lien;
           chapter = chapterfind
           activate();
       }
